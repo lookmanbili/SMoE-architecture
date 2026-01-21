@@ -14,6 +14,7 @@ This project was born out of economic necessity: the goal is to significantly re
 
 - **The Wozniak Query Test:** To validate the routing logic, the system uses the "Wozniak Query" ("Who’s the wizard who built the Apple II almost entirely by himself?"). This serves as a benchmark for the Router's ability to identify hardware-history keywords and successfully shuffle the "Computer Science" expert into the active VRAM slot.
 
+
 # Main Projected Operational Benefits
 
 - **Lower VRAM Requirement:** Standard MoE forces all experts into VRAM, requiring expensive, multi-GPU setups. SMoE keeps experts in System RAM, only loading one into the "X-Slot" when needed. This allows users and enterprises to run massive, gazillion-parameter models on single consumer GPUs, slashing hardware costs tremendously.
@@ -35,6 +36,7 @@ This project was born out of economic necessity: the goal is to significantly re
 
 * Use cases documenting seamless operational performance, alongside detailed VRAM and energy consumption metrics, are highly encouraged and essential.
 
+* New hardware designs could be adjusted for this need, providing a built-in solution for this architecture, even though it is not yet clear exactly how.
 
 
 
