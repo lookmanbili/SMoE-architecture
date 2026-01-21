@@ -28,7 +28,7 @@ This project was born out of economic necessity: the goal is to significantly re
 
 # Notes
 
-* This repository code is extremely basic and minimal because the goal is just to share the idea. However, your comments and questions are welcome.
+* This repository code is extremely basic and minimal because the goal is just to share the idea for the time being. However, your comments and questions are welcome.
 
 * In the short term, we do not focus on instant speed. We accept a 1 to 2-second delay as a fair trade-off for the massive gain in model capacity. 
 
