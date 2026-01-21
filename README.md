@@ -24,7 +24,7 @@ This project was born out of economic necessity: the goal is to significantly re
 
 - **Switching Speed:** Swapping experts between System RAM and the GPU should take about 1–2 seconds. While standard MoE is instant, SMoE accepts this delay to run gazillion-parameter models more economically. However, new ideas to reduce that time are welcome.
 
-- **Complex Memory Management:**
+- **Complex Memory Management:**Efficient memory management creates a perfectly timed flow of experts between System RAM and VRAM. Mastering this 'hand-off' ensures a seamless, high-performance experience.
 
 # Notes
 
