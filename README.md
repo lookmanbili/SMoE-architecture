@@ -1,10 +1,10 @@
-# SMoE Architecture: X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling
+# SMoE Architecture (Shuffled Mixture of Experts): X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling
 
 The modern Mixture of Experts technique was designed to lower hardware requirements. In contrast to loading a whole model, it allows for selective economcal computation. yet it still demands that the entire expert library be stored in GPU memory. In other words: it requires every expert to reside in VRAM simultaneously. This 'VRAM tax' makes truly massive models expensve. 
 
-The XE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an ensemble of N specialized LLM experts within a constrained VRAM environment.
+The SMoE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an ensemble of N specialized LLM experts within a constrained VRAM environment.
 
-This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By treating the GPU as a transient cache rather than a static storage unit, the XE Architecture allows a single consumer-grade GPU to provide the breadth of a 10-model cluster with minimal efficiency drawbacks in the mid-term.
+This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By treating the GPU as a transient cache rather than a static storage unit, the SMoE Architecture allows a single consumer-grade GPU to provide the breadth of a 10-model cluster with minimal efficiency drawbacks in the mid-term.
 
 # Key Components & Philosophy
 
@@ -17,11 +17,12 @@ This project was born out of economic necessity: the goal is to significantly re
 # Main Projected Operational Benefits
 
 - **Lower VRAM Requirement:** Standard MoE forces all experts into VRAM, requiring expensive, multi-GPU setups. SMoE keeps experts in System RAM, only loading one into the "X-Slot" when needed. This allows users and enterprises to run massive, gazillion-parameter models on single consumer GPUs, slashing hardware costs tremendously.
-- **Lower Energy Cost:** Standard LLM and MoE architectures require massive power to keep an entire GPU cluster idling and cooled, as every parameter must remain resident in VRAM. XE Architecture slashes energy consumption tremendously by operating on a single GPU. By only 'powering up' one expert in the X-Slot at a time, it eliminates the massive electrical overhead and industrial cooling requirements of enterprise data centers.
+- **Lower Energy Cost:** Standard LLM and MoE architectures require massive power to keep an entire GPU cluster idling and cooled, as every parameter must remain resident in VRAM. SMoE Architecture slashes energy consumption tremendously by operating on a single GPU. By only 'powering up' one expert in the X-Slot at a time, it eliminates the massive electrical overhead and industrial cooling requirements of enterprise data centers.
 
 # Main Projected Operational Challenges
 
-- **Switching Speed:**
+- **Switching Speed:** Swapping experts between System RAM and the GPU should take about 1–2 seconds. While standard MoE is instant, SMoE accepts this delay to run gazillion-parameter models more economically. However, new ideas to reduce that time are welcome.
+
 - **Complex Memory Management:**
 
 # Notes
