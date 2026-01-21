@@ -16,16 +16,18 @@ This project was born out of economic necessity: the goal is to significantly re
 # Main Projected Operational Benefits
 
 - **Lower VRAM Requirement:**
-- **Lower Gnereal Hardware Cost:**
+- **Lower General Hardware Cost:**
 
 # Main Projected Operational Challenges
 
 - **Switching Speed:**
-- **Complex Memory Management**
+- **Complex Memory Management:**
 
 # Notes
 
+* This method is clearly beneficial for both small-scale and ultra-large LLMs—and neural networks in general. However, as hardware configurations evolve, the implementation flow must adapt drastically, scaling from consumer-grade setups to enterprise-level industrial clusters.
 
+* 
 
 
 
