@@ -1,4 +1,4 @@
-# SMoE Architecture (Shuffled Mixture of Experts): X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling
+# SMoE Architecture (Shuffled Mixture of Experts): X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling 
 
 The modern Mixture of Experts technique was designed to lower hardware requirements. In contrast to loading a whole model, it allows for selective, economical computation. Yet, it still demands that the entire expert library be stored in GPU memory. In other words, it requires every expert to reside in VRAM simultaneously. This "VRAM tax" makes truly massive models expensive.
 
