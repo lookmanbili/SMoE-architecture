@@ -76,8 +76,11 @@ We fix for the moment 01 negotiable pillar:
 
 # External Notes
 
-* 21/01/2026 Charming_Zucchini648 (Reddit) suggested many benchmarks to check for possible inference gains.
+Note - 01/21/2026 - **Charming_Zucchini648** (Reddit) suggested many benchmarks to check for possible inference gains.
+Note Response - Yes an absolute need that wll be done n mddle term.
 
+Note - 01/22/2026 - **Edzomatic** (Reddit) asked "How is that different from On-Demand Swapping? Like mixtral-offloading ?"  
+Note Response - The (Fractal) SMoE architecture provides 100% accuracy with no quantization, as VRAM is not as occupied as in Mixtral offloading; human interaction is used to improve latency (passively meaning execution of weight models occurs after the sentence is finished) using a predictive orchestrator that is, in fact, retrained continuously as a "tree structure." VRAM holds only the micro "leaf" neurons required (for example, to solve a formula, the entire math model is not loaded, but rather a sub-model such as discrete mathematics, which has significantly fewer weights).  
 
 <img width="722" height="510" alt="SMoE" src="https://github.com/user-attachments/assets/00ce7bda-5e32-4f71-a717-633e43a049fa" />
 
