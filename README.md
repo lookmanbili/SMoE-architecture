@@ -4,7 +4,7 @@ The modern Mixture of Experts technique was designed to lower hardware requireme
 
 The SMoE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an ensemble of N specialized LLM experts within a constrained VRAM environment.
 
-This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By treating the GPU as a transient cache rather than a static storage unit, the SMoE Architecture allows a single consumer-grade GPU to provide the breadth of a 10-model cluster with minimal efficiency drawbacks in the mid-term.
+This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By treating the GPU as a temporary workspace rather than a permanent warehouse, our architecture lets a single home computer do the work of multiple servers without losing speed, theoretically.
 
 # Main Projected Operational Benefits
 
