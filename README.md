@@ -25,7 +25,7 @@ This project was born out of economic necessity: the goal is to significantly re
 
 - **Temporal Latency Masking :** This architecture leverages the Temporal Gap existing between user input and model execution to mitigate physical data-transfer bottlenecks. During the user-input phase or the initial token-parsing sequence, the Predictive Orchestrator initiates *Asynchronous Background Transfers*. This mechanism effectively masks PCIe latency within the human-interaction window, ensuring that the necessary fractal weights are resident in the X-Slot before the execution phase commences.
 
-- **Predictive Orchestration:** By decoupling the hardware-level *Predictive Orchestrator* from the software-level MoE Router, you move from reactive to proactive management. The Orchestrator "flags" and moves data before the Router even reaches the specific layer, ensuring weights are waiting in the X-Slot.
+- **Predictive Orchestration:** By decoupling the hardware-level *Predictive Orchestrator* from the software-level MoE Router, you move from reactive to proactive management. The Orchestrator "flags" and moves data before the Router even reaches the specific layer, ensuring weights are waiting in the X-Slot. The Predictive Orchestrator is a take on a rewiring mechanism feedback loop.
 
 - **Dynamic Tree-Map Retraining:** The Self-Optimizing Index allows the Orchestrator to evolve through *Periodic Retraining*. It learns user-specific subject pivots and "prunes" unnecessary branches from the pre-load list. This personalization creates a localized, high-speed "neural shortcut" that gets faster the more it's used.
 
