@@ -52,7 +52,7 @@ We fix for the moment 01 negotiable pillar:
 
 - **Iterative Growth :** This version is a minimalist foundation. It focuses on the primary logic gate (Search & Assessment) and the physical swap, allowing for gradual improvements to avoid the performance caveats usually associated with model switching.
 
-- **The Wozniak Query Test :** To validate the routing logic, the system uses the "Wozniak Query" ("Who’s the wizard who built the Apple II almost entirely by himself?"). This serves as a *Hello World* test for the Router's ability to identify hardware-history keywords and successfully shuffle the "Computer Science" expert into the active VRAM slot.
+- **The Wozniak Query Test :** To validate the routing logic, the system uses the "Wozniak Query" ("Analyze how Steve Wozniak’s use of the 6502’s 'zero page' addressing to optimize the Apple II's memory cycles parallels the metabolic efficiency of CRISPR-Cas9 protein binding during off-target DNA sequence searching."). This serves as a *Hello World* test. To pass this benchmark with 100% Deterministic Accuracy, the model must avoid metaphors and provide a mechanical comparison.
 
 
 
