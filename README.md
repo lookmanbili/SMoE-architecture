@@ -1,26 +1,26 @@
-# SMoE Architecture (Shuffled Mixture of Experts): X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling 
+# HPSMoE Architecture (Shuffled Mixture of Experts): X-Slot Elasticity and Orchestrating N-Expert LLM Clusters via Dynamic VRAM Shuffling 
 
 The modern Mixture of Experts technique was designed to lower hardware requirements. In contrast to loading a whole model, it allows for selective, economical computation. Yet, it still demands that the entire expert library be stored in GPU memory. In other words, it requires every expert to reside in VRAM simultaneously. This "VRAM tax" makes truly massive models expensive.
 
-The SMoE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an ensemble of N specialized LLM experts within a constrained VRAM environment.  By managing VRAM as an asynchronous buffer dedicated to incoming fractal weights, you enable trillion-parameter models to run on consumer GPUs with a huge context agility; this is basically an offloading mechanism.
+The HPSMoE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an ensemble of N specialized LLM experts within a constrained VRAM environment.  By managing VRAM as an asynchronous buffer dedicated to incoming fractal weights, you enable trillion-parameter models to run on consumer GPUs with a huge context agility; this is basically an offloading mechanism.
 
 This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By treating the GPU as a temporary workspace rather than a permanent warehouse, our architecture lets a single home computer do the work of multiple servers without losing speed, theoretically.
 
 # Main Projected Operational Benefits
 
-- **Lower VRAM Requirement:** Standard MoE forces all experts into VRAM, requiring expensive, multi-GPU setups. SMoE keeps experts in System RAM, only loading one into the "X-Slot" when needed. This allows users and enterprises to run massive, gazillion-parameter models on single consumer GPUs, slashing hardware costs tremendously.
+- **Lower VRAM Requirement:** Standard HPSMoE forces all experts into VRAM, requiring expensive, multi-GPU setups. HPSMoE keeps experts in System RAM, only loading one into the "X-Slot" when needed. This allows users and enterprises to run massive, gazillion-parameter models on single consumer GPUs, slashing hardware costs tremendously.
 
-- **Lower Energy Cost:** Standard LLM and MoE architectures require massive power to keep an entire GPU cluster idling and cooled, as every parameter must remain resident in VRAM. SMoE Architecture slashes energy consumption tremendously by operating on a single GPU. By only 'powering up' one expert in the X-Slot at a time, it eliminates the massive electrical overhead and industrial cooling requirements of enterprise data centers.
+- **Lower Energy Cost:** Standard LLM and HPSMoE architectures require massive power to keep an entire GPU cluster idling and cooled, as every parameter must remain resident in VRAM. HPSMoE Architecture slashes energy consumption tremendously by operating on a single GPU. By only 'powering up' one expert in the X-Slot at a time, it eliminates the massive electrical overhead and industrial cooling requirements of enterprise data centers.
 
 
-<img width="751" height="281" alt="shuffledsmoe2" src="https://github.com/user-attachments/assets/df788269-be13-4d26-ada6-37b3d415dc02" />
+<img width="751" height="281" alt="HPSMoE" src="https://github.com/user-attachments/assets/df788269-be13-4d26-ada6-37b3d415dc02" />
 
 
 # Proposed Optimization Mechanisms
 
 - **Asynchronous X-Slot Management :** The X-Slot transforms VRAM from a static storage tank into a high-speed "revolving door." By managing *VRAM as an Asynchronous Buffer* dedicated to incoming fractal weights, you enable trillion-parameter models to run on consumer GPUs with virtually infinite context agility.
 
-- **Fractal Weight Loading :** Unlike standard MoE models that load massive, "atomic" expert blocks, this architecture utilizes *Hierarchical Fractal Loading*. By "Zooming In" on specific task-neuron clusters (leaves) rather than entire domains (branches), we reduce the PCIe bandwidth requirement, enabling massive efficiency.
+- **Fractal Weight Loading :** Unlike standard HPSMoE models that load massive, "atomic" expert blocks, this architecture utilizes *Hierarchical Fractal Loading*. By "Zooming In" on specific task-neuron clusters (leaves) rather than entire domains (branches), we reduce the PCIe bandwidth requirement, enabling massive efficiency.
 
 - **Temporal Latency Masking :** This architecture leverages the Temporal Gap existing between user input and model execution to mitigate physical data-transfer bottlenecks. During the user-input phase or the initial token-parsing sequence, the Predictive Orchestrator initiates *Asynchronous Background Transfers*. This mechanism effectively masks PCIe latency within the human-interaction window, ensuring that the necessary fractal weights are resident in the X-Slot before the execution phase commences.
 
@@ -59,7 +59,7 @@ We fix for the moment 01 negotiable pillar:
 
 # Main Projected Operational Challenges
 
-- **Switching Speed :** Swapping experts between System RAM and the GPU should take about 1–2 seconds. While standard MoE is instant, SMoE accepts this delay to run gazillion-parameter models more economically. However, new ideas to reduce that time are welcome.
+- **Switching Speed :** While a standard MoE is almost instant, FPSMoE is effectively faster because it leverages the prefetch mechanism and the reduced size of micro-experts. However, due to the hardware limitations described, this remains a critical area.
 
 - **Complex Memory Management :** Efficient memory management creates a perfectly timed flow of experts between System RAM and VRAM. Mastering this 'hand-off' ensures a seamless, high-performance experience.
 
