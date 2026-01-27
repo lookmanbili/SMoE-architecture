@@ -6,7 +6,9 @@ The FPSMoE Architecture circumvents this limit by introducing the X-Slot—a dyn
 
 This project was born out of economic necessity: the goal is to significantly reduce the cost of running high-parameter intelligence by utilizing Dynamic VRAM Shuffling. By _treating the GPU as a temporary workspace rather than a permanent warehouse_, our architecture lets a single home computer do the work of multiple servers without losing speed, theoretically.
 
-FPSMoE is a forward-designed LLM architecture for training or deeply fine-tuning models with hierarchical, modular experts from the ground up. It enables dynamic expert loading and memory-efficient inference, and _is intended for builders shaping new models and is not designed for retrofitting existing monolithic LLMs_.
+<u>FPSMoE is a forward-designed LLM architecture for training or deeply fine-tuning models with hierarchical, modular experts from the ground up. It enables dynamic expert loading and memory-efficient inference, and _is intended for builders shaping new models and is not designed for retrofitting existing monolithic LLMs_.</u>
+
+<u>It introduces intent-aware static (periodically retrained) routing and context anticipation mechanisms that leverage user typing time for pre-analysis and expert prefetching. By treating system RAM as a weight warehouse and VRAM as a dynamic workspace, the architecture enables high-capacity models to operate on low-VRAM consumer hardware with significantly reduced energy consumption.</u>
 
 # Main Projected Operational Benefits
 
