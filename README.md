@@ -4,7 +4,7 @@ The modern Mixture of Experts technique was designed to lower hardware requireme
 
 The FPSMoE Architecture circumvents this limit by introducing the X-Slot—a dynamic gateway that swaps experts from System RAM only when they are needed. It is a hardware-aware framework designed to orchestrate an LLM expert within a constrained VRAM environment. By managing VRAM as an asynchronous buffer dedicated to incoming fractal weights, you enable trillion-parameter models to run on standard consumer GPUs (relatively) with a huge context agility; this is basically an slightly enhanced offloading mechanism.
 
-### Tradeoffs and strcutrural wse we beleve that:
+### Tradeoffs and structural wise, we believe that:
  
 • Correctness and acceptable answers are more valuable than less accurate but faster ones.<br>
 • Using user typing time should be done, but not at the expense of false intent/context capture, by introducing a 100% validation process.<br>
